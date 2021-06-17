@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 30,
               ),
               ElevatedButton(
+                key: Key('push_button_main'),
                 style: ButtonStyle(
                     textStyle: MaterialStateProperty.all<TextStyle>(
                       TextStyle(

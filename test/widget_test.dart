@@ -12,10 +12,18 @@ import 'package:random_task/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+
+    const testButtonKey = Key('push_button_main');
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('Input Your Name Here....'), findsOneWidget);
+    expect(find.byKey(testButtonKey), findsOneWidget);
+
+    await tester.tap(find.byKey(testButtonKey));
+    await tester.pump();
+
+    expect(find.text('Please input your name first!'), findsOneWidget);
   });
 }
