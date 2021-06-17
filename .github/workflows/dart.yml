@@ -31,3 +31,11 @@ jobs:
       run: flutter format --set-exit-if-changed --dry-run .
     - name: Run Flutter unit tests
       run: flutter test
+    - name: Build Web
+      run: flutter build Web
+    - name: Publish to Github Pages
+      if: ${{ matrix.os == 'ubuntu-18.04' && github.event_name == 'push' }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build/web
