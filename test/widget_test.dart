@@ -12,7 +12,6 @@ import 'package:random_task/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-
     const testButtonKey = Key('push_button_main');
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
