@@ -75,12 +75,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 key: Key('push_button_main'),
                 style: ButtonStyle(
-                    textStyle: MaterialStateProperty.all<TextStyle>(
+                    textStyle: WidgetStateProperty.all<TextStyle>(
                       TextStyle(
                         fontSize: 22.0,
                       ),
                     ),
-                    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
                       EdgeInsets.all(25.0),
                     )),
                 onPressed: () {
